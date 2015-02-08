@@ -1,0 +1,439 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		DB665F581A87667700DB4C84 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB665F571A87667700DB4C84 /* AppDelegate.swift */; };
+		DB665F5B1A87667700DB4C84 /* TuringMachine.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = DB665F591A87667700DB4C84 /* TuringMachine.xcdatamodeld */; };
+		DB665F5D1A87667700DB4C84 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB665F5C1A87667700DB4C84 /* ViewController.swift */; };
+		DB665F601A87667700DB4C84 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DB665F5E1A87667700DB4C84 /* Main.storyboard */; };
+		DB665F621A87667700DB4C84 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DB665F611A87667700DB4C84 /* Images.xcassets */; };
+		DB665F651A87667700DB4C84 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = DB665F631A87667700DB4C84 /* LaunchScreen.xib */; };
+		DB665F711A87667800DB4C84 /* TuringMachineTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB665F701A87667800DB4C84 /* TuringMachineTests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		DB665F6B1A87667800DB4C84 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = DB665F4A1A87667700DB4C84 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = DB665F511A87667700DB4C84;
+			remoteInfo = TuringMachine;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		DB665F521A87667700DB4C84 /* TuringMachine.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TuringMachine.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		DB665F561A87667700DB4C84 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		DB665F571A87667700DB4C84 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		DB665F5A1A87667700DB4C84 /* TuringMachine.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = TuringMachine.xcdatamodel; sourceTree = "<group>"; };
+		DB665F5C1A87667700DB4C84 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		DB665F5F1A87667700DB4C84 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		DB665F611A87667700DB4C84 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		DB665F641A87667700DB4C84 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
+		DB665F6A1A87667800DB4C84 /* TuringMachineTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TuringMachineTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		DB665F6F1A87667800DB4C84 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		DB665F701A87667800DB4C84 /* TuringMachineTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TuringMachineTests.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		DB665F4F1A87667700DB4C84 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DB665F671A87667800DB4C84 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		DB665F491A87667700DB4C84 = {
+			isa = PBXGroup;
+			children = (
+				DB665F541A87667700DB4C84 /* TuringMachine */,
+				DB665F6D1A87667800DB4C84 /* TuringMachineTests */,
+				DB665F531A87667700DB4C84 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		DB665F531A87667700DB4C84 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				DB665F521A87667700DB4C84 /* TuringMachine.app */,
+				DB665F6A1A87667800DB4C84 /* TuringMachineTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		DB665F541A87667700DB4C84 /* TuringMachine */ = {
+			isa = PBXGroup;
+			children = (
+				DB665F571A87667700DB4C84 /* AppDelegate.swift */,
+				DB665F5C1A87667700DB4C84 /* ViewController.swift */,
+				DB665F5E1A87667700DB4C84 /* Main.storyboard */,
+				DB665F611A87667700DB4C84 /* Images.xcassets */,
+				DB665F631A87667700DB4C84 /* LaunchScreen.xib */,
+				DB665F591A87667700DB4C84 /* TuringMachine.xcdatamodeld */,
+				DB665F551A87667700DB4C84 /* Supporting Files */,
+			);
+			path = TuringMachine;
+			sourceTree = "<group>";
+		};
+		DB665F551A87667700DB4C84 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				DB665F561A87667700DB4C84 /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		DB665F6D1A87667800DB4C84 /* TuringMachineTests */ = {
+			isa = PBXGroup;
+			children = (
+				DB665F701A87667800DB4C84 /* TuringMachineTests.swift */,
+				DB665F6E1A87667800DB4C84 /* Supporting Files */,
+			);
+			path = TuringMachineTests;
+			sourceTree = "<group>";
+		};
+		DB665F6E1A87667800DB4C84 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				DB665F6F1A87667800DB4C84 /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		DB665F511A87667700DB4C84 /* TuringMachine */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = DB665F741A87667800DB4C84 /* Build configuration list for PBXNativeTarget "TuringMachine" */;
+			buildPhases = (
+				DB665F4E1A87667700DB4C84 /* Sources */,
+				DB665F4F1A87667700DB4C84 /* Frameworks */,
+				DB665F501A87667700DB4C84 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = TuringMachine;
+			productName = TuringMachine;
+			productReference = DB665F521A87667700DB4C84 /* TuringMachine.app */;
+			productType = "com.apple.product-type.application";
+		};
+		DB665F691A87667800DB4C84 /* TuringMachineTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = DB665F771A87667800DB4C84 /* Build configuration list for PBXNativeTarget "TuringMachineTests" */;
+			buildPhases = (
+				DB665F661A87667800DB4C84 /* Sources */,
+				DB665F671A87667800DB4C84 /* Frameworks */,
+				DB665F681A87667800DB4C84 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				DB665F6C1A87667800DB4C84 /* PBXTargetDependency */,
+			);
+			name = TuringMachineTests;
+			productName = TuringMachineTests;
+			productReference = DB665F6A1A87667800DB4C84 /* TuringMachineTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		DB665F4A1A87667700DB4C84 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0610;
+				ORGANIZATIONNAME = Greensource;
+				TargetAttributes = {
+					DB665F511A87667700DB4C84 = {
+						CreatedOnToolsVersion = 6.1.1;
+					};
+					DB665F691A87667800DB4C84 = {
+						CreatedOnToolsVersion = 6.1.1;
+						TestTargetID = DB665F511A87667700DB4C84;
+					};
+				};
+			};
+			buildConfigurationList = DB665F4D1A87667700DB4C84 /* Build configuration list for PBXProject "TuringMachine" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = DB665F491A87667700DB4C84;
+			productRefGroup = DB665F531A87667700DB4C84 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				DB665F511A87667700DB4C84 /* TuringMachine */,
+				DB665F691A87667800DB4C84 /* TuringMachineTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		DB665F501A87667700DB4C84 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DB665F601A87667700DB4C84 /* Main.storyboard in Resources */,
+				DB665F651A87667700DB4C84 /* LaunchScreen.xib in Resources */,
+				DB665F621A87667700DB4C84 /* Images.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DB665F681A87667800DB4C84 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		DB665F4E1A87667700DB4C84 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DB665F5D1A87667700DB4C84 /* ViewController.swift in Sources */,
+				DB665F5B1A87667700DB4C84 /* TuringMachine.xcdatamodeld in Sources */,
+				DB665F581A87667700DB4C84 /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DB665F661A87667800DB4C84 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DB665F711A87667800DB4C84 /* TuringMachineTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		DB665F6C1A87667800DB4C84 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = DB665F511A87667700DB4C84 /* TuringMachine */;
+			targetProxy = DB665F6B1A87667800DB4C84 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		DB665F5E1A87667700DB4C84 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				DB665F5F1A87667700DB4C84 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		DB665F631A87667700DB4C84 /* LaunchScreen.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				DB665F641A87667700DB4C84 /* Base */,
+			);
+			name = LaunchScreen.xib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		DB665F721A87667800DB4C84 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		DB665F731A87667800DB4C84 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		DB665F751A87667800DB4C84 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = TuringMachine/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		DB665F761A87667800DB4C84 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = TuringMachine/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		DB665F781A87667800DB4C84 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = TuringMachineTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/TuringMachine.app/TuringMachine";
+			};
+			name = Debug;
+		};
+		DB665F791A87667800DB4C84 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = TuringMachineTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/TuringMachine.app/TuringMachine";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		DB665F4D1A87667700DB4C84 /* Build configuration list for PBXProject "TuringMachine" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				DB665F721A87667800DB4C84 /* Debug */,
+				DB665F731A87667800DB4C84 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		DB665F741A87667800DB4C84 /* Build configuration list for PBXNativeTarget "TuringMachine" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				DB665F751A87667800DB4C84 /* Debug */,
+				DB665F761A87667800DB4C84 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		DB665F771A87667800DB4C84 /* Build configuration list for PBXNativeTarget "TuringMachineTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				DB665F781A87667800DB4C84 /* Debug */,
+				DB665F791A87667800DB4C84 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		DB665F591A87667700DB4C84 /* TuringMachine.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				DB665F5A1A87667700DB4C84 /* TuringMachine.xcdatamodel */,
+			);
+			currentVersion = DB665F5A1A87667700DB4C84 /* TuringMachine.xcdatamodel */;
+			path = TuringMachine.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = DB665F4A1A87667700DB4C84 /* Project object */;
+}
