@@ -22,3 +22,7 @@ It content can be read and write.
 
 
 4. Alphabet
+
+An alphabet is a finite set of Symbol
+
+5. Symbol

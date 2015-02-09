@@ -14,6 +14,10 @@
 		DB665F621A87667700DB4C84 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DB665F611A87667700DB4C84 /* Images.xcassets */; };
 		DB665F651A87667700DB4C84 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = DB665F631A87667700DB4C84 /* LaunchScreen.xib */; };
 		DB665F711A87667800DB4C84 /* TuringMachineTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB665F701A87667800DB4C84 /* TuringMachineTests.swift */; };
+		DB665F7D1A87DFC600DB4C84 /* Alphabet.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB665F7C1A87DFC600DB4C84 /* Alphabet.swift */; };
+		DB665F7E1A87DFC600DB4C84 /* Alphabet.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB665F7C1A87DFC600DB4C84 /* Alphabet.swift */; };
+		DB665F801A88E69B00DB4C84 /* Symbol.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB665F7F1A88E69B00DB4C84 /* Symbol.swift */; };
+		DB665F811A88E69B00DB4C84 /* Symbol.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB665F7F1A88E69B00DB4C84 /* Symbol.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -38,6 +42,8 @@
 		DB665F6A1A87667800DB4C84 /* TuringMachineTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TuringMachineTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		DB665F6F1A87667800DB4C84 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		DB665F701A87667800DB4C84 /* TuringMachineTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TuringMachineTests.swift; sourceTree = "<group>"; };
+		DB665F7C1A87DFC600DB4C84 /* Alphabet.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Alphabet.swift; sourceTree = "<group>"; };
+		DB665F7F1A88E69B00DB4C84 /* Symbol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Symbol.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -79,8 +85,7 @@
 		DB665F541A87667700DB4C84 /* TuringMachine */ = {
 			isa = PBXGroup;
 			children = (
-				DB665F571A87667700DB4C84 /* AppDelegate.swift */,
-				DB665F5C1A87667700DB4C84 /* ViewController.swift */,
+				DB665F7A1A87DEAA00DB4C84 /* Classes */,
 				DB665F5E1A87667700DB4C84 /* Main.storyboard */,
 				DB665F611A87667700DB4C84 /* Images.xcassets */,
 				DB665F631A87667700DB4C84 /* LaunchScreen.xib */,
@@ -113,6 +118,25 @@
 				DB665F6F1A87667800DB4C84 /* Info.plist */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		DB665F7A1A87DEAA00DB4C84 /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				DB665F7B1A87DEC800DB4C84 /* Model */,
+				DB665F571A87667700DB4C84 /* AppDelegate.swift */,
+				DB665F5C1A87667700DB4C84 /* ViewController.swift */,
+			);
+			name = Classes;
+			sourceTree = "<group>";
+		};
+		DB665F7B1A87DEC800DB4C84 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				DB665F7C1A87DFC600DB4C84 /* Alphabet.swift */,
+				DB665F7F1A88E69B00DB4C84 /* Symbol.swift */,
+			);
+			name = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -216,7 +240,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				DB665F5D1A87667700DB4C84 /* ViewController.swift in Sources */,
+				DB665F801A88E69B00DB4C84 /* Symbol.swift in Sources */,
 				DB665F5B1A87667700DB4C84 /* TuringMachine.xcdatamodeld in Sources */,
+				DB665F7D1A87DFC600DB4C84 /* Alphabet.swift in Sources */,
 				DB665F581A87667700DB4C84 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -225,7 +251,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DB665F7E1A87DFC600DB4C84 /* Alphabet.swift in Sources */,
 				DB665F711A87667800DB4C84 /* TuringMachineTests.swift in Sources */,
+				DB665F811A88E69B00DB4C84 /* Symbol.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -411,6 +439,7 @@
 				DB665F761A87667800DB4C84 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		DB665F771A87667800DB4C84 /* Build configuration list for PBXNativeTarget "TuringMachineTests" */ = {
 			isa = XCConfigurationList;
@@ -419,6 +448,7 @@
 				DB665F791A87667800DB4C84 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 
