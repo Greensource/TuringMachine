@@ -20,6 +20,11 @@ class Alphabet {
 		self.alphabet += alphabet
 	}
 	
+	func blankSymbol() -> Symbol
+	{
+		return self.alphabet[0]
+	}
+	
 	func description() -> String
 	{
 		var result: String = ""
