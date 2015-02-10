@@ -11,11 +11,33 @@ import Foundation
 class Alphabet {
 	
 	// First element is blank one
-	var alphabet : Array<Symbol> = []
+	var alphabet : [Symbol] = []
 	
-	func initWithBlankSymbol(blankSymbol : Symbol, alphabet : Array<Symbol>)
+	init(blankSymbol : Symbol, alphabet : [Symbol])
 	{
-		var temp : Array<Symbol> = []
+		blankSymbol.isBlankSymbol = true;
+		self.alphabet = [blankSymbol]
+		self.alphabet += alphabet
 	}
 	
+	func description() -> String
+	{
+		var result: String = ""
+		result += "Blank symbol is " + self.alphabet[0].description()
+		result += "\nOthers symbol are : "
+		
+		if (self.alphabet.count > 1)
+		{
+			result += "\(self.alphabet[1].description())"
+		}
+
+		if (self.alphabet.count > 2)
+		{
+			for index  in 2...(self.alphabet.count-1) {
+				result += ", \(self.alphabet[index].description())"
+			}
+		}
+		
+		return result
+	}
 }

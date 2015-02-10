@@ -13,8 +13,13 @@ class Symbol {
 	var stringSymbol : String = ""
 	var isBlankSymbol : Bool = false
 	
-	func initWithString(symbol: String) {
+	init(symbol: String) {
 		self.stringSymbol = symbol
 		self.isBlankSymbol = false
+	}
+	
+	func description() -> NSString
+	{
+		return stringSymbol
 	}
 }
