@@ -8,7 +8,7 @@
 
 import Foundation
 
-class TableEntry {
+class Transition {
 	var initialState: State
 	var readSymbol: Symbol
 	var writeSymbol: Symbol
@@ -20,5 +20,15 @@ class TableEntry {
 		self.readSymbol = read
 		self.writeSymbol = write
 		self.newState = final
+	}
+	
+	func description() -> String
+	{
+		var result = "|\(self.initialState.description())|"
+		result += "\(self.readSymbol.description())|"
+		result += "\(self.writeSymbol.description())|"
+		result += "\(self.newState.description())|"
+		
+		return result
 	}
 }

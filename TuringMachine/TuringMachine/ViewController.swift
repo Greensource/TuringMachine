@@ -44,9 +44,19 @@ class ViewController: UIViewController {
 		var state3 = State(identifier: "s3")
 		var stop = State(identifier: "stop"); stop.isStop = true
 		
-		var entry1 = TableEntry(initial: state1, read: oneSymbol, write: blankSymbol, final: state1)
-		var entry2 = TableEntry(initial: state1, read: blankSymbol, write: blankSymbol, final: stop)
+		var entry1 = Transition(initial: state1, read: oneSymbol, write: blankSymbol, final: state1)
+		var entry2 = Transition(initial: state1, read: blankSymbol, write: blankSymbol, final: stop)
 
+		println(tape.fullDescription())
+		tape.previousCell()
+		tape.previousCell()
+		tape.writeCurrentCell(oneSymbol)
+		tape.nextCell()
+		tape.writeCurrentCell(oneSymbol)
+		tape.nextCell()
+		tape.writeCurrentCell(oneSymbol)
+		tape.nextCell()
+		println(tape.fullDescription())
 		
 	}
 

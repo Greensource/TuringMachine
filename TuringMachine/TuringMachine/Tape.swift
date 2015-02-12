@@ -25,6 +25,21 @@ class Tape {
 		}
 	}
 	
+	func applyTransition(transition : Transition)
+	{
+		
+	}
+	
+	func readCurrentCell() -> Symbol
+	{
+		return cells[currentIndex].read()
+	}
+	
+	func writeCurrentCell(newSymbol: Symbol)
+	{
+		cells[currentIndex].write(newSymbol)
+	}
+	
 	func currentCell() -> Cell
 	{
 		return self.cells[currentIndex]
@@ -42,10 +57,20 @@ class Tape {
 		return self.cells[currentIndex]
 	}
 	
-	// TODO
-	/*
 	func description() -> String
 	{
+		var result = "Current cell Symbol is \(cells[currentIndex])"
+		return result
+	}
+	
+	func fullDescription() -> String
+	{
+		var result = ""
+		for cell in cells
+		{
+			result += "\(cell.description())"
+		}
 		
-	}*/
+		return result
+	}
 }
