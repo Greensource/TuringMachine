@@ -19,7 +19,7 @@ class TransitionItem {
 		self.readSymbol = readSymbol
 		self.writeSymbol = writeSymbol
         self.movement = movement
-		self.newState = final
+		self.newState = final		
 	}
 	
 	func isEqual(otherTransitionItem: TransitionItem) -> Bool
@@ -40,7 +40,7 @@ class TransitionItem {
 		result += "\(self.writeSymbol.description())|"
         switch self.movement {
         case .Left:
-            result += "Left|"
+            result += "Left |"
         case .Right:
             result += "Right|"
         }

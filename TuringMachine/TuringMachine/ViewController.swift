@@ -30,8 +30,10 @@ class ViewController: UIViewController {
 		var state1 = State(identifier: "s1")
 		var state2 = State(identifier: "s2")
 		var state3 = State(identifier: "s3")
+		var state4 = State(identifier: "s4")
+		var state5 = State(identifier: "s5")
 		var stop = State(identifier: "stop"); stop.isStop = true
-		
+		/*
         var item10 = TransitionItem(readSymbol: oneSymbol, writeSymbol: blankSymbol, movement: Movement.Right, final: state1)
         var item11 = TransitionItem(readSymbol: blankSymbol, writeSymbol: blankSymbol, movement: Movement.Right, final: state2)
 
@@ -39,11 +41,25 @@ class ViewController: UIViewController {
         
         var item20 = TransitionItem(readSymbol: blankSymbol, writeSymbol: blankSymbol, movement: Movement.Right, final: stop)
 		var t2 = Transition(initialState: state2, items: [item20])
+		*/
+		// wikipedia example:
+		var arret = TransitionItem(readSymbol: blankSymbol, writeSymbol: blankSymbol, movement: Movement.Right, final: stop)
+		var e12 = TransitionItem(readSymbol: oneSymbol, writeSymbol: blankSymbol, movement: Movement.Right, final: state2)
+		var e21 = TransitionItem(readSymbol: oneSymbol, writeSymbol: oneSymbol, movement: Movement.Right, final: state2)
+		var e22 = TransitionItem(readSymbol: blankSymbol, writeSymbol: blankSymbol, movement: Movement.Right, final: state3)
+		var e31 = TransitionItem(readSymbol: oneSymbol, writeSymbol: oneSymbol, movement: Movement.Right, final: state3)
+		var e32 = TransitionItem(readSymbol: blankSymbol, writeSymbol: oneSymbol, movement: Movement.Left, final: state4)
+		var e41 = TransitionItem(readSymbol: oneSymbol, writeSymbol: oneSymbol, movement: Movement.Left, final: state4)
+		var e42 = TransitionItem(readSymbol: blankSymbol, writeSymbol: blankSymbol, movement: Movement.Left, final: state5)
+		var e51 = TransitionItem(readSymbol: oneSymbol, writeSymbol: oneSymbol, movement: Movement.Left, final: state5)
+		var e52 = TransitionItem(readSymbol: blankSymbol, writeSymbol: oneSymbol, movement: Movement.Right, final: state1)
 
-        println("item20 : \(item20.description())")
-
-        
-        
+		var w1 = Transition(initialState: state1, items: [arret,e12])
+		var w2 = Transition(initialState: state2, items: [e21,e22])
+		var w3 = Transition(initialState: state3, items: [e31,e32])
+		var w4 = Transition(initialState: state4, items: [e41,e42])
+		var w5 = Transition(initialState: state5, items: [e51,e52])
+		
         tape.previousCell()
         tape.previousCell()
         tape.writeCurrentCell(oneSymbol)
@@ -60,7 +76,7 @@ class ViewController: UIViewController {
 
         println("Initial tape : \(tape.fullDescription())")
         println("Execute Erasor machine")
-		var allan = TuringMachine(tape: tape, transitions: [t1,t2])
+		var allan = TuringMachine(tape: tape, transitions: [w1,w2,w3,w4,w5])
         allan.execute()
 	}
 

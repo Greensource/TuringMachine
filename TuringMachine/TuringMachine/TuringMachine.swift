@@ -33,7 +33,7 @@ class TuringMachine {
 			if currentTransition.readSymbol.isEqual(currentTapeSymbol)
 			{
                 foundSymbol = true
-                
+				
 				// ok, we can write the new Symbol
                 //println("Change Cell value from \(self.tape.currentCell().description()) to \(currentTransition.writeSymbol.description())")
 				self.tape.writeCurrentCell(currentTransition.writeSymbol)

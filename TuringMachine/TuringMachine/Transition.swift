@@ -15,6 +15,17 @@ class Transition {
     init(initialState: State, items: [TransitionItem])
     {
         self.initialState = initialState
-        self.transitionItems = items
+        self.transitionItems = items		
     }
+	
+	func description() -> String
+	{
+		var result = ""
+		for item in transitionItems
+		{
+			result += "|\(initialState.description())\(item.description())"
+		}
+		
+		return result
+	}
 }
