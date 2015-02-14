@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		A08BD4BC1A8FAE4600271A39 /* Movement.swift in Sources */ = {isa = PBXBuildFile; fileRef = A08BD4BB1A8FAE4600271A39 /* Movement.swift */; };
+		A08BD4BD1A8FAE4600271A39 /* Movement.swift in Sources */ = {isa = PBXBuildFile; fileRef = A08BD4BB1A8FAE4600271A39 /* Movement.swift */; };
+		A08BD4BF1A8FB31200271A39 /* Transition.swift in Sources */ = {isa = PBXBuildFile; fileRef = A08BD4BE1A8FB31200271A39 /* Transition.swift */; };
+		A08BD4C01A8FB31200271A39 /* Transition.swift in Sources */ = {isa = PBXBuildFile; fileRef = A08BD4BE1A8FB31200271A39 /* Transition.swift */; };
 		DB524DA01A8D2F330067D173 /* TuringMachine.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB524D9F1A8D2F330067D173 /* TuringMachine.swift */; };
 		DB524DA11A8D2F330067D173 /* TuringMachine.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB524D9F1A8D2F330067D173 /* TuringMachine.swift */; };
 		DB665F581A87667700DB4C84 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB665F571A87667700DB4C84 /* AppDelegate.swift */; };
@@ -22,8 +26,8 @@
 		DB665F811A88E69B00DB4C84 /* Symbol.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB665F7F1A88E69B00DB4C84 /* Symbol.swift */; };
 		DB93245B1A89E63E00E15D31 /* State.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB93245A1A89E63E00E15D31 /* State.swift */; };
 		DB93245C1A89E63E00E15D31 /* State.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB93245A1A89E63E00E15D31 /* State.swift */; };
-		DB93245E1A89E6EB00E15D31 /* Transition.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB93245D1A89E6EB00E15D31 /* Transition.swift */; };
-		DB93245F1A89E6EB00E15D31 /* Transition.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB93245D1A89E6EB00E15D31 /* Transition.swift */; };
+		DB93245E1A89E6EB00E15D31 /* TransitionItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB93245D1A89E6EB00E15D31 /* TransitionItem.swift */; };
+		DB93245F1A89E6EB00E15D31 /* TransitionItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB93245D1A89E6EB00E15D31 /* TransitionItem.swift */; };
 		DB9324611A89E8DD00E15D31 /* Cell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB9324601A89E8DD00E15D31 /* Cell.swift */; };
 		DB9324621A89E8DD00E15D31 /* Cell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB9324601A89E8DD00E15D31 /* Cell.swift */; };
 		DB9324641A89EC0000E15D31 /* Tape.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB9324631A89EC0000E15D31 /* Tape.swift */; };
@@ -41,6 +45,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		A08BD4BB1A8FAE4600271A39 /* Movement.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Movement.swift; sourceTree = "<group>"; };
+		A08BD4BE1A8FB31200271A39 /* Transition.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Transition.swift; sourceTree = "<group>"; };
 		DB524D9F1A8D2F330067D173 /* TuringMachine.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TuringMachine.swift; sourceTree = "<group>"; };
 		DB665F521A87667700DB4C84 /* TuringMachine.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TuringMachine.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DB665F561A87667700DB4C84 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -56,7 +62,7 @@
 		DB665F7C1A87DFC600DB4C84 /* Alphabet.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Alphabet.swift; sourceTree = "<group>"; };
 		DB665F7F1A88E69B00DB4C84 /* Symbol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Symbol.swift; sourceTree = "<group>"; };
 		DB93245A1A89E63E00E15D31 /* State.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = State.swift; sourceTree = "<group>"; };
-		DB93245D1A89E6EB00E15D31 /* Transition.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Transition.swift; sourceTree = "<group>"; };
+		DB93245D1A89E6EB00E15D31 /* TransitionItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TransitionItem.swift; sourceTree = "<group>"; };
 		DB9324601A89E8DD00E15D31 /* Cell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Cell.swift; sourceTree = "<group>"; };
 		DB9324631A89EC0000E15D31 /* Tape.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Tape.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -151,10 +157,12 @@
 				DB665F7C1A87DFC600DB4C84 /* Alphabet.swift */,
 				DB665F7F1A88E69B00DB4C84 /* Symbol.swift */,
 				DB93245A1A89E63E00E15D31 /* State.swift */,
-				DB93245D1A89E6EB00E15D31 /* Transition.swift */,
+				DB93245D1A89E6EB00E15D31 /* TransitionItem.swift */,
+				A08BD4BE1A8FB31200271A39 /* Transition.swift */,
 				DB9324601A89E8DD00E15D31 /* Cell.swift */,
 				DB9324631A89EC0000E15D31 /* Tape.swift */,
 				DB524D9F1A8D2F330067D173 /* TuringMachine.swift */,
+				A08BD4BB1A8FAE4600271A39 /* Movement.swift */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -259,12 +267,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A08BD4BC1A8FAE4600271A39 /* Movement.swift in Sources */,
 				DB665F5D1A87667700DB4C84 /* ViewController.swift in Sources */,
 				DB665F801A88E69B00DB4C84 /* Symbol.swift in Sources */,
 				DB524DA01A8D2F330067D173 /* TuringMachine.swift in Sources */,
 				DB665F5B1A87667700DB4C84 /* TuringMachine.xcdatamodeld in Sources */,
 				DB665F7D1A87DFC600DB4C84 /* Alphabet.swift in Sources */,
-				DB93245E1A89E6EB00E15D31 /* Transition.swift in Sources */,
+				A08BD4BF1A8FB31200271A39 /* Transition.swift in Sources */,
+				DB93245E1A89E6EB00E15D31 /* TransitionItem.swift in Sources */,
 				DB9324611A89E8DD00E15D31 /* Cell.swift in Sources */,
 				DB665F581A87667700DB4C84 /* AppDelegate.swift in Sources */,
 				DB9324641A89EC0000E15D31 /* Tape.swift in Sources */,
@@ -276,12 +286,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A08BD4C01A8FB31200271A39 /* Transition.swift in Sources */,
 				DB665F7E1A87DFC600DB4C84 /* Alphabet.swift in Sources */,
 				DB665F711A87667800DB4C84 /* TuringMachineTests.swift in Sources */,
+				A08BD4BD1A8FAE4600271A39 /* Movement.swift in Sources */,
 				DB665F811A88E69B00DB4C84 /* Symbol.swift in Sources */,
 				DB93245C1A89E63E00E15D31 /* State.swift in Sources */,
 				DB524DA11A8D2F330067D173 /* TuringMachine.swift in Sources */,
-				DB93245F1A89E6EB00E15D31 /* Transition.swift in Sources */,
+				DB93245F1A89E6EB00E15D31 /* TransitionItem.swift in Sources */,
 				DB9324651A89EC0000E15D31 /* Tape.swift in Sources */,
 				DB9324621A89E8DD00E15D31 /* Cell.swift in Sources */,
 			);

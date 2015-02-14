@@ -44,22 +44,33 @@ class ViewController: UIViewController {
 		var state3 = State(identifier: "s3")
 		var stop = State(identifier: "stop"); stop.isStop = true
 		
-		var entry1 = Transition(initial: state1, readables: [oneSymbol], writables: [blankSymbol], final: state1)
-		var entry2 = Transition(initial: state1, readables: [blankSymbol], writables: [blankSymbol], final: stop)
+        var item10 = TransitionItem(readSymbol: oneSymbol, writeSymbol: blankSymbol, movement: Movement.Right, final: state1)
+        var item11 = TransitionItem(readSymbol: blankSymbol, writeSymbol: blankSymbol, movement: Movement.Right, final: state2)
 
-		println(tape.fullDescription())
-		tape.previousCell()
-		tape.previousCell()
-		tape.writeCurrentCell(oneSymbol)
-		tape.nextCell()
-		tape.writeCurrentCell(oneSymbol)
-		tape.nextCell()
-		tape.writeCurrentCell(oneSymbol)
-		tape.nextCell()
-		println(tape.fullDescription())
-		
-		
-		
+		var t1 = Transition(initialState: state1, items: [item10,item11])
+        
+        var item20 = TransitionItem(readSymbol: blankSymbol, writeSymbol: blankSymbol, movement: Movement.Right, final: stop)
+		var t2 = Transition(initialState: state2, items: [item20])
+
+        
+        println(tape.fullDescription())
+        tape.previousCell()
+        tape.previousCell()
+        tape.writeCurrentCell(oneSymbol)
+        tape.nextCell()
+        tape.writeCurrentCell(oneSymbol)
+        tape.nextCell()
+        tape.writeCurrentCell(oneSymbol)
+        tape.nextCell()
+        
+        tape.previousCell()
+        tape.previousCell()
+        tape.previousCell()
+
+        
+        println(tape.fullDescription())
+		var allan = TuringMachine(tape: tape, transitions: [t1,t2])
+        allan.execute()		
 	}
 
 	override func didReceiveMemoryWarning() {

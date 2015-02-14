@@ -54,16 +54,24 @@ class Tape {
 	
 	func description() -> String
 	{
-		var result = "Current cell Symbol is \(cells[currentIndex])"
+		var result = "Current cell Symbol is \(cells[currentIndex].description())"
 		return result
 	}
 	
 	func fullDescription() -> String
 	{
 		var result = ""
-		for cell in cells
+        for index in 0...cells.count-1
 		{
-			result += "\(cell.description())"
+            var current = cells[index]
+            if index == currentIndex
+            {
+                result += "[\(current.description())]"
+            }
+            else
+            {
+                result += "\(current.description())"
+            }
 		}
 		
 		return result
