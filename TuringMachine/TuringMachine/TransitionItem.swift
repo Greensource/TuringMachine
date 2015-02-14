@@ -42,7 +42,7 @@ class TransitionItem {
         case .Left:
             result += "Left|"
         case .Right:
-            result += "Right"
+            result += "Right|"
         }
         result += "\(self.newState.description())|"
 

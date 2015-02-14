@@ -25,6 +25,13 @@ class State {
 	
 	func description() -> String
 	{
-		return self.identifier
+        if isStop
+        {
+            return "STOP"
+        }
+        else
+        {
+            return self.identifier
+        }
 	}
 }

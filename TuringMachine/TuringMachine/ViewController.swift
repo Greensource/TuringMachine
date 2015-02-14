@@ -40,6 +40,9 @@ class ViewController: UIViewController {
         var item20 = TransitionItem(readSymbol: blankSymbol, writeSymbol: blankSymbol, movement: Movement.Right, final: stop)
 		var t2 = Transition(initialState: state2, items: [item20])
 
+        println("item20 : \(item20.description())")
+
+        
         
         tape.previousCell()
         tape.previousCell()
