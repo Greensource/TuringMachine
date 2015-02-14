@@ -18,6 +18,11 @@ class State {
 		self.identifier = identifier
 	}
 	
+	func isEqual(otherState: State) -> Bool
+	{
+		return self.identifier == otherState.identifier
+	}
+	
 	func description() -> String
 	{
 		return self.identifier

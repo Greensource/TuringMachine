@@ -24,6 +24,11 @@ class Symbol {
 		self.isBlankSymbol = newSymbol.isBlankSymbol;
 	}
 	
+	func isEqual(otherSymbol: Symbol) -> Bool
+	{
+		return self.stringSymbol == otherSymbol.stringSymbol
+	}
+	
 	func description() -> NSString
 	{
 		return stringSymbol

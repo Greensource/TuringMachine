@@ -25,11 +25,6 @@ class Tape {
 		}
 	}
 	
-	func applyTransition(transition : Transition)
-	{
-		
-	}
-	
 	func readCurrentCell() -> Symbol
 	{
 		return cells[currentIndex].read()
