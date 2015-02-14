@@ -26,18 +26,6 @@ class ViewController: UIViewController {
 		
 		println(alphabet.description())
 		
-		for symbol in alphabet.alphabet
-		{
-			if (symbol.isBlankSymbol)
-			{
-				println("symbol \(symbol.description()) is blank")
-			}
-			else
-			{
-				println("symbol \(symbol.description()) is not blank")
-			}
-		}
-		
 		var tape = Tape(alphabet: alphabet)
 		var state1 = State(identifier: "s1")
 		var state2 = State(identifier: "s2")
@@ -53,7 +41,6 @@ class ViewController: UIViewController {
 		var t2 = Transition(initialState: state2, items: [item20])
 
         
-        println(tape.fullDescription())
         tape.previousCell()
         tape.previousCell()
         tape.writeCurrentCell(oneSymbol)
@@ -67,10 +54,11 @@ class ViewController: UIViewController {
         tape.previousCell()
         tape.previousCell()
 
-        
-        println(tape.fullDescription())
+
+        println("Initial tape : \(tape.fullDescription())")
+        println("Execute Erasor machine")
 		var allan = TuringMachine(tape: tape, transitions: [t1,t2])
-        allan.execute()		
+        allan.execute()
 	}
 
 	override func didReceiveMemoryWarning() {

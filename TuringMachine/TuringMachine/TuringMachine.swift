@@ -51,7 +51,7 @@ class TuringMachine {
                 
 				// Then pass to new State
 				var newState = currentTransition.newState;
-                println("New State is \(newState.description())")
+                //println("New State is \(newState.description())")
                 
                 if !newState.isStop
                 {
