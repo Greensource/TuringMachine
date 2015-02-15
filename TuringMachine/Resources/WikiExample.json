@@ -1,0 +1,19 @@
+{
+    "alphabet": {
+        "blank": "0",
+        "symbols": ["1"]
+    },
+    "states": ["s1","s2","s3","s4","stop"],
+    "transitions": [
+    "s1|0|0|Right|stop|",
+    "s1|1|0|Right|s2|",
+    "s2|1|1|Right|s2|",
+    "s2|0|0|Right|s3|",
+    "s3|1|1|Right|s3|",
+    "s3|0|1|Left|s4|",
+    "s4|1|1|Left|s4|",
+    "s4|0|0|Left|s5|",
+    "s5|1|1|Left|s5|",
+    "s4|0|1|Right|s1|"
+    ]
+}

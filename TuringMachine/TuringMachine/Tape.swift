@@ -16,7 +16,7 @@ class Tape {
 	
 	init (alphabet: Alphabet)
 	{
-		blankSymbol = alphabet.blankSymbol()
+		blankSymbol = alphabet.blankSymbol
 		for index in 0...10
 		{
 			var newBlankSymbol = Symbol(newSymbol: blankSymbol)
@@ -34,7 +34,6 @@ class Tape {
 		{
 			var charactere = tapeArray[index]
 			var newSymbol = Symbol(string: "\(charactere)")
-			newSymbol.isBlankSymbol = newSymbol.isEqual(blankSymbol)
 			
 			var newCell = Cell(newSymbol: newSymbol)
 			cells.insert(newCell, atIndex: index)
@@ -96,6 +95,18 @@ class Tape {
 		return result
 	}
 	
+    func fullDescriptionWithoutHighlight() -> String
+    {
+        var result = ""
+        for index in 0...cells.count-1
+        {
+            var current = cells[index]
+            result += "\(current.description())"
+        }
+        
+        return result
+    }
+    
 	func fullDescription() -> String
 	{
 		var result = ""

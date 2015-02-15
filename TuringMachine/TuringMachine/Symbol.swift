@@ -11,17 +11,14 @@ import Foundation
 class Symbol {
 	
 	var stringSymbol : String = ""
-	var isBlankSymbol : Bool = false
 	
 	init(string: String) {
 		self.stringSymbol = string
-		self.isBlankSymbol = false
 	}
 	
 	init(newSymbol: Symbol)
 	{
 		self.stringSymbol = newSymbol.stringSymbol;
-		self.isBlankSymbol = newSymbol.isBlankSymbol;
 	}
 	
 	func isEqual(otherSymbol: Symbol) -> Bool

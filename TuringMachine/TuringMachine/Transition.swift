@@ -1,31 +1,86 @@
 //
-//  Transition.swift
+//  TableEntry.swift
 //  TuringMachine
 //
-//  Created by Pierre DUCHENE on 14/02/2015.
+//  Created by Pierre DUCHENE on 10/02/2015.
 //  Copyright (c) 2015 Greensource. All rights reserved.
 //
 
 import Foundation
 
 class Transition {
-    var initialState: State
-    var transitionItems: [TransitionItem]
+    var oldState: State
+	var readSymbol: Symbol
+	var writeSymbol: Symbol
+    var movement: Movement
+	var newState: State
+	
+    init(oldState: State, readSymbol: Symbol, writeSymbol: Symbol, movement: Movement, final: State)
+	{
+        self.oldState = oldState
+		self.readSymbol = readSymbol
+		self.writeSymbol = writeSymbol
+        self.movement = movement
+		self.newState = final		
+	}
     
-    init(initialState: State, items: [TransitionItem])
+    /*
+     *  |<oldState>|<readSymbol>|<writeSymbol>|<movement>|<newState>|
+     */
+    init(description: String)
     {
-        self.initialState = initialState
-        self.transitionItems = items		
+        let elements = split(description, { (c: Character) -> Bool in
+            c == "|"
+        }, maxSplit: Int.max, allowEmptySlices: false)
+        
+        var index = 0
+        let oldStateString = elements[index++]
+        let readSymbolString = elements[index++]
+        let writeSymbolString = elements[index++]
+        let movementString = elements[index++]
+        let newStateString = elements[index++]
+
+        oldState = State(identifier: oldStateString)
+        readSymbol = Symbol(string: readSymbolString)
+        writeSymbol = Symbol(string: writeSymbolString)
+        switch movementString {
+            case "Left":
+            movement = Movement.Left
+            case "Right":
+            movement = Movement.Right
+        default:
+            movement = Movement.Right
+        }
+        newState = State(identifier: newStateString)
+        newState.isStop = newStateString == "stop"
     }
+	
+	func isEqual(otherTransition: Transition) -> Bool
+	{
+		var result = true
+		
+        result &= oldState.isEqual(otherTransition.oldState)
+		result &= self.readSymbol.isEqual(otherTransition.readSymbol)
+        result &= self.writeSymbol.isEqual(otherTransition.writeSymbol)
+        result &= self.movement == otherTransition.movement
+		result &= self.newState.isEqual(otherTransition.newState)
+		
+		return result
+	}
 	
 	func description() -> String
 	{
-		var result = ""
-		for item in transitionItems
-		{
-			result += "|\(initialState.description())\(item.description())"
-		}
-		
+		var result = "|\(oldState.description())|"
+        result += "|\(self.readSymbol.description())|"
+		result += "\(self.writeSymbol.description())|"
+        switch self.movement {
+        case .Left:
+            result += "Left |"
+        case .Right:
+            result += "Right|"
+        }
+        result += "\(self.newState.description())|"
+
 		return result
 	}
 }

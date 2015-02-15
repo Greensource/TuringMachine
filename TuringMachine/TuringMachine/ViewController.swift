@@ -18,6 +18,28 @@ class ViewController: UIViewController {
 	override func viewWillAppear(animated: Bool) {
 		super.viewWillAppear(animated)
 		
+        DataManager.extractMachineFromJSONWithSuccess("WikiExample", success: { (data) -> Void in
+            let json = JSON(data: data)
+            var alphabetJson = json["alphabet"]
+            var transitionsJson = json["transitions"]
+            var statesJson = json["states"]
+            
+            let blankSymbolString = alphabetJson["blank"].stringValue
+            let blankSymbol = Symbol(string: blankSymbolString)
+            var symbols: Array<String> = []
+            for (key: String, subJson: JSON) in alphabetJson["symbols"] {
+                symbols.insert(subJson.stringValue, atIndex: 0);
+            }
+            var alphabet : Alphabet = Alphabet(blankSymbol: blankSymbol, otherArray: symbols)
+
+            
+            var tape = Tape(blankSymbol: blankSymbol, stringTape: "11")
+            
+            
+        })
+        
+        
+        
 		var blankSymbol : Symbol = Symbol(string: "0")
 		var oneSymbol : Symbol = Symbol(string: "1")
 
@@ -26,7 +48,7 @@ class ViewController: UIViewController {
 		
 		println(alphabet.description())
 		
-		var tape = Tape(blankSymbol: blankSymbol, stringTape: "1111111111")
+		var tape = Tape(blankSymbol: blankSymbol, stringTape: "11")
 		var state1 = State(identifier: "s1")
 		var state2 = State(identifier: "s2")
 		var state3 = State(identifier: "s3")
@@ -43,33 +65,30 @@ class ViewController: UIViewController {
 		var t2 = Transition(initialState: state2, items: [item20])
 		*/
 		// wikipedia example:
-		var arret = TransitionItem(readSymbol: blankSymbol, writeSymbol: blankSymbol, movement: Movement.Right, final: stop)
-		var e12 = TransitionItem(readSymbol: oneSymbol, writeSymbol: blankSymbol, movement: Movement.Right, final: state2)
-		var e21 = TransitionItem(readSymbol: oneSymbol, writeSymbol: oneSymbol, movement: Movement.Right, final: state2)
-		var e22 = TransitionItem(readSymbol: blankSymbol, writeSymbol: blankSymbol, movement: Movement.Right, final: state3)
-		var e31 = TransitionItem(readSymbol: oneSymbol, writeSymbol: oneSymbol, movement: Movement.Right, final: state3)
-		var e32 = TransitionItem(readSymbol: blankSymbol, writeSymbol: oneSymbol, movement: Movement.Left, final: state4)
-		var e41 = TransitionItem(readSymbol: oneSymbol, writeSymbol: oneSymbol, movement: Movement.Left, final: state4)
-		var e42 = TransitionItem(readSymbol: blankSymbol, writeSymbol: blankSymbol, movement: Movement.Left, final: state5)
-		var e51 = TransitionItem(readSymbol: oneSymbol, writeSymbol: oneSymbol, movement: Movement.Left, final: state5)
-		var e52 = TransitionItem(readSymbol: blankSymbol, writeSymbol: oneSymbol, movement: Movement.Right, final: state1)
+        var arret = Transition(description: "|s1|0|0|Right|stop|")
+        var e12 = Transition(description: "|s1|1|0|Right|s2|")
 
-		var w1 = Transition(initialState: state1, items: [arret,e12])
-		var w2 = Transition(initialState: state2, items: [e21,e22])
-		var w3 = Transition(initialState: state3, items: [e31,e32])
-		var w4 = Transition(initialState: state4, items: [e41,e42])
-		var w5 = Transition(initialState: state5, items: [e51,e52])
+        var e21 = Transition(description: "|s2|1|1|Right|s2|")
+		var e22 = Transition(description: "|s2|0|0|Right|s3|")
+        var e31 = Transition(oldState: state3, readSymbol: oneSymbol, writeSymbol: oneSymbol, movement: Movement.Right, final: state3)
+		var e32 = Transition(oldState: state3, readSymbol: blankSymbol, writeSymbol: oneSymbol, movement: Movement.Left, final: state4)
+		var e41 = Transition(oldState: state4, readSymbol: oneSymbol, writeSymbol: oneSymbol, movement: Movement.Left, final: state4)
+		var e42 = Transition(oldState: state4, readSymbol: blankSymbol, writeSymbol: blankSymbol, movement: Movement.Left, final: state5)
+		var e51 = Transition(oldState: state5, readSymbol: oneSymbol, writeSymbol: oneSymbol, movement: Movement.Left, final: state5)
+		var e52 = Transition(oldState: state5, readSymbol: blankSymbol, writeSymbol: oneSymbol, movement: Movement.Right, final: state1)
 
         println("Initial tape : \(tape.fullDescription())")
-		var allan = TuringMachine(tape: tape, transitions: [w1,w2,w3,w4,w5])
-        allan.execute()
+        var alan = TuringMachine(tape: tape,initialState: state1, transitions: [arret,e12,e21,e22,e31,e32,e41,e42,e51,e52])
+        alan.execute()
+        
+        println("Final tape : \(tape.fullDescriptionWithoutHighlight())")
+
 	}
 
 	override func didReceiveMemoryWarning() {
 		super.didReceiveMemoryWarning()
 		// Dispose of any resources that can be recreated.
 	}
-
 
 }
 
