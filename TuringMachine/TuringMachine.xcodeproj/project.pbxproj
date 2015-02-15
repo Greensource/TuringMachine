@@ -144,6 +144,8 @@
 		DB665F7A1A87DEAA00DB4C84 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
+				DBE6B9B51A9085E6007BFA11 /* Controllers */,
+				DBE6B9B41A9085DE007BFA11 /* UI */,
 				DB665F7B1A87DEC800DB4C84 /* Model */,
 				DB665F571A87667700DB4C84 /* AppDelegate.swift */,
 				DB665F5C1A87667700DB4C84 /* ViewController.swift */,
@@ -165,6 +167,20 @@
 				A08BD4BB1A8FAE4600271A39 /* Movement.swift */,
 			);
 			name = Model;
+			sourceTree = "<group>";
+		};
+		DBE6B9B41A9085DE007BFA11 /* UI */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = UI;
+			sourceTree = "<group>";
+		};
+		DBE6B9B51A9085E6007BFA11 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Controllers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */

@@ -26,7 +26,7 @@ class ViewController: UIViewController {
 		
 		println(alphabet.description())
 		
-		var tape = Tape(alphabet: alphabet)
+		var tape = Tape(blankSymbol: blankSymbol, stringTape: "1111111111")
 		var state1 = State(identifier: "s1")
 		var state2 = State(identifier: "s2")
 		var state3 = State(identifier: "s3")
@@ -59,23 +59,8 @@ class ViewController: UIViewController {
 		var w3 = Transition(initialState: state3, items: [e31,e32])
 		var w4 = Transition(initialState: state4, items: [e41,e42])
 		var w5 = Transition(initialState: state5, items: [e51,e52])
-		
-        tape.previousCell()
-        tape.previousCell()
-        tape.writeCurrentCell(oneSymbol)
-        tape.nextCell()
-        tape.writeCurrentCell(oneSymbol)
-        tape.nextCell()
-        tape.writeCurrentCell(oneSymbol)
-        tape.nextCell()
-        
-        tape.previousCell()
-        tape.previousCell()
-        tape.previousCell()
-
 
         println("Initial tape : \(tape.fullDescription())")
-        println("Execute Erasor machine")
 		var allan = TuringMachine(tape: tape, transitions: [w1,w2,w3,w4,w5])
         allan.execute()
 	}

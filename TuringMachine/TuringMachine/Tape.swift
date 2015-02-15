@@ -12,10 +12,11 @@ class Tape {
 	
 	var cells: [Cell] = []
 	var currentIndex: Int = 0
+	var blankSymbol: Symbol
 	
 	init (alphabet: Alphabet)
 	{
-		var blankSymbol = alphabet.blankSymbol()
+		blankSymbol = alphabet.blankSymbol()
 		for index in 0...10
 		{
 			var newBlankSymbol = Symbol(newSymbol: blankSymbol)
@@ -23,6 +24,23 @@ class Tape {
 			self.cells += [newCell]
 			self.currentIndex = self.cells.count/2
 		}
+	}
+	
+	init(blankSymbol: Symbol, stringTape: String)
+	{
+		self.blankSymbol = blankSymbol
+		let tapeArray = Array(stringTape)
+		for index in 0...tapeArray.count-1
+		{
+			var charactere = tapeArray[index]
+			var newSymbol = Symbol(string: "\(charactere)")
+			newSymbol.isBlankSymbol = newSymbol.isEqual(blankSymbol)
+			
+			var newCell = Cell(newSymbol: newSymbol)
+			cells.insert(newCell, atIndex: index)
+		}
+		
+		self.currentIndex = 0
 	}
 	
 	func readCurrentCell() -> Symbol
@@ -42,13 +60,33 @@ class Tape {
 	
 	func previousCell() -> Cell
 	{
-		self.currentIndex--
+		if (currentIndex == 0)
+		{
+			// We have to add a cell at first
+			var newCell = Cell(newSymbol: blankSymbol)
+			cells.insert(newCell, atIndex: 0)
+		}
+		else
+		{
+			self.currentIndex--
+		}
+		
 		return self.cells[currentIndex]
 	}
 	
 	func nextCell() -> Cell
 	{
-		self.currentIndex++
+		if (currentIndex == cells.count-1)
+		{
+			// We have to add a cell at first
+			var newCell = Cell(newSymbol: blankSymbol)
+			cells.insert(newCell, atIndex: cells.count-1)
+		}
+		else
+		{
+			self.currentIndex++
+		}
+		
 		return self.cells[currentIndex]
 	}
 	
