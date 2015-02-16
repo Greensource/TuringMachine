@@ -79,7 +79,8 @@ class Tape {
 		{
 			// We have to add a cell at first
 			var newCell = Cell(newSymbol: blankSymbol)
-			cells.insert(newCell, atIndex: cells.count-1)
+			cells.append(newCell)
+			self.currentIndex++
 		}
 		else
 		{

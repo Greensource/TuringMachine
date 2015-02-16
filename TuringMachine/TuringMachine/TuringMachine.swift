@@ -25,13 +25,15 @@ class TuringMachine {
         self.currentState = initialState
 	}
 	
-	func executeTransition()
+	func executeTransition() -> Bool
 	{
-        var foundSymbol = false
+        var transitionWasExecuted = false
         var currentTapeSymbol = self.tape.readCurrentCell()
         if self.currentTransition.readSymbol.isEqual(currentTapeSymbol)
         {
-            foundSymbol = true
+			//println("Execute transition \(self.currentTransition.description())")
+
+            transitionWasExecuted = true
             
             // ok, we can write the new Symbol
             //println("Change Cell value from \(self.tape.currentCell().description()) to \(currentTransition.writeSymbol.description())")
@@ -63,20 +65,16 @@ class TuringMachine {
         {
             // Symbols are different
         }
-        
-        if !foundSymbol
-        {
-            println("[Error] No Symbol matching on this Cell, this machine will not terminate")
-            self.terminate = true
-        }
+		
+		return transitionWasExecuted
     }
 	
 	func transitionsForState(state: State) -> [Transition]
 	{
-        var result: [Transition] = []
+		var result: [Transition] = []
 		for index in 0...(self.transitionTable.count-1)
 		{
-			var current = self.transitionTable[index]
+			let current = self.transitionTable[index]
 			if current.oldState.isEqual(state)
 			{
 				result.append(current)
@@ -93,23 +91,23 @@ class TuringMachine {
 		{
             // Find right Transition
             let possibleTransitions = self.transitionsForState(currentState)
-            var foundATransition = false
+
+			var transitionSucceed = false
             for transition in possibleTransitions
             {
-                if transition.oldState.isEqual(currentState)
+                if transition.oldState.isEqual(currentState) && !transitionSucceed
                 {
-                    foundATransition = true
                     self.currentTransition = transition
-                    self.executeTransition();
+					transitionSucceed = self.executeTransition();
                 }
             }
-            if !foundATransition
+            if !transitionSucceed
             {
                 self.terminate = true
                 println("[Error] Current state doesn't match with any state")
             }
             
-            println("Tape : \(self.tape.fullDescription())")
+            println("Tape : \(self.tape.fullDescription()) state:\(self.currentState.description())")
 		}
 	}
 }
