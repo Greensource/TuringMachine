@@ -21,7 +21,26 @@ class Transition {
 		self.readSymbol = readSymbol
 		self.writeSymbol = writeSymbol
         self.movement = movement
-		self.newState = final		
+		self.newState = final
+	}
+	
+	init(string: String)
+	{
+		var components = string.componentsSeparatedByString("|");
+		
+		self.oldState = State(identifier: components[0])
+		self.readSymbol = Symbol(string: components[1])
+		self.writeSymbol = Symbol(string: components[2])
+		switch components[3]
+		{
+		case "Left":
+			self.movement = Movement.Left
+		case "Right":
+			self.movement = Movement.Right
+		default:
+			self.movement = Movement.Right
+		}
+		self.newState = State(identifier: components[4])
 	}
     
     /*
@@ -71,7 +90,7 @@ class Transition {
 	func description() -> String
 	{
 		var result = "|\(oldState.description())|"
-        result += "|\(self.readSymbol.description())|"
+        result += "\(self.readSymbol.description())|"
 		result += "\(self.writeSymbol.description())|"
         switch self.movement {
         case .Left:

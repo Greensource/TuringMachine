@@ -16,6 +16,7 @@ class State {
 	init (identifier: String)
 	{
 		self.identifier = identifier
+		self.isStop = identifier == "stop"
 	}
 	
 	func isEqual(otherState: State) -> Bool

@@ -41,17 +41,28 @@ class ViewController: UIViewController {
 			let blankSymbol = Symbol(string: blankSymbolString)
 			var symbols: Array<String> = []
 			for (key: String, subJson: JSON) in alphabetJson["symbols"] {
-				symbols.insert(subJson.stringValue, atIndex: 0);
+				symbols.append(subJson.stringValue);
 			}
 			var alphabet : Alphabet = Alphabet(blankSymbol: blankSymbol, otherArray: symbols)
 			
-			
 			var tape = Tape(blankSymbol: blankSymbol, stringTape: "11")
 			
+			var transitions: [Transition] = []
+			for (key: String, subJson: JSON) in transitionsJson {
+				let current = Transition(string: subJson.stringValue)
+				transitions.append(current)
+			}
+			
+			var initialState = State(identifier:statesJson[0].stringValue)
+			
+			println("Initial tape : \(tape.fullDescription())")
+			var alan = TuringMachine(tape: tape,initialState: initialState, transitions:transitions)
+			alan.execute()
+			println("Final tape : \(tape.fullDescriptionWithoutHighlight())")
 			
 		})
 		
-		
+		/*
 		var blankSymbol : Symbol = Symbol(string: "0")
 		var oneSymbol : Symbol = Symbol(string: "1")
 		
@@ -86,6 +97,7 @@ class ViewController: UIViewController {
 		alan.execute()
 		
 		println("Final tape : \(tape.fullDescriptionWithoutHighlight())")
+*/
 	}
 	
 }
